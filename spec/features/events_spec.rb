@@ -57,6 +57,12 @@ feature "Events" do
 
     click_on "delete" #failure occurs here!
 
+    expect(page).to have_no_content("My super awesome event")
+    expect(page).to have_no_content("Somewhere Elsewhere")
+    expect(page).to have_no_content("2014-09-04")
+    expect(page).to have_no_content(12)
+    expect(page).to have_no_content("true")
+
   end
 
 end
